@@ -1,7 +1,12 @@
+"""
+Class functions for fargate ssm shell
+
+Todo: N/A
+"""
+
 import time
 import sys
 import signal
-import time
 import os
 import boto3
 import botocore
@@ -30,7 +35,7 @@ class SsmShellFunctions():
             self._cleanup(message)
         return
 
-    def _sigint_cleanup(self, signal, frame):
+    def _sigint_cleanup(self, sig, frame):
         """Cleanup task and ssm instance with interrupt failure reason"""
         self._cleanup('Interrupted by user')
 

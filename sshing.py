@@ -1,11 +1,16 @@
-import time
+"""
+Launch a fargate container and send commands via SSM
+
+Todo: N/A
+"""
+
 from functions import SsmShellFunctions
 
 STARTED_BY_NAME = 'ssm_shell'
 
 
 class SsmShell(SsmShellFunctions):
-
+    """Launch a fargate container and send commands via SSM"""
 
     def connect(self):
         """Connect to the target app based on ecs_service name"""
